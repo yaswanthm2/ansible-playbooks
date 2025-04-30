@@ -1,0 +1,14 @@
+- name: playbook to install and run nginx
+  hosts: web
+  become: yes
+  tasks: 
+  - name: installing nginx
+    ansible.builtinit.yum:
+      name: nginx
+      state: present 
+  - name: start nginx service
+    ansible.builtinit.service: 
+      name: nginx
+      state: started
+      enabled: true
+  
