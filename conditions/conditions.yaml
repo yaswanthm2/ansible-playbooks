@@ -1,9 +1,11 @@
 - name: creating user roboshop with condition 
   hosts: localhost
   become: yes
+  vars: 
+   name: roboshop
   tasks: 
   - name: checking user exist or not
-    ansible.builtin.command: id roboshop
+    ansible.builtin.command: id {{name}}
     register: output
     ignore_errors: true
   - name: printing output values
