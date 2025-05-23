@@ -1,0 +1,32 @@
+- name: printing data types 
+  hosts: localhost
+  vars:
+    name: "yaswanth" #string
+    age:  "25"   #number
+    courseslearn: 
+    - AWS
+    - ansible
+    - terraform          #lis of courses learn 
+    - kubernetes
+    - jenkins
+    details: 
+      DOB: 5-12-1999
+      birthplace: ongole           #map of details 
+      presentaddress: bangalore
+    isalive: true                   #boolean
+  tasks: 
+    - name: printing name
+      ansibile.builtin.debug:
+       msg: " name of employee: {{name}}"
+    - name: printing age
+      ansible.builtin.debug:
+       msg: "age of employee: {{age}}"
+    - name: printing courses learn 
+      ansible.builtin.debug: 
+       msg: " courses learn: {{courseslearn}}"
+    - name: printing details 
+      ansible.builtin.debug:
+       msg: "details of employee: {{details}}"
+    - name: printing alive status
+      ansible.builtin.debug: 
+       msg: "is he alive now: {{isalive}}"
