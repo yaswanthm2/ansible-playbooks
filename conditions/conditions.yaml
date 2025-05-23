@@ -1,5 +1,5 @@
 - name: creating user roboshop with condition 
-  hosts: localhost
+  hosts: node
   become: yes
   vars: 
    name: roboshop
