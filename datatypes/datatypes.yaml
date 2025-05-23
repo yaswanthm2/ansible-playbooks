@@ -16,7 +16,7 @@
     isalive: true                   #boolean
   tasks: 
     - name: printing name
-      ansibile.builtin.debug:
+      ansible.builtin.debug:
        msg: " name of employee: {{name}}"
     - name: printing age
       ansible.builtin.debug:
