@@ -1,0 +1,6 @@
+- name: printing variables from inventory
+  hosts: node
+  tasks: 
+  - name: printing my node name 
+    ansible.builtin.debug: 
+      msg: "my village name is {{NODE}}"

@@ -3,10 +3,10 @@
   vars_prompt:
   - name: username
     prompt: please enter username
-    private: false
+    private: false #you can see values entered on prompt
   - name: password
     prompt: please enter password 
-    private: true 
+    private: true #you can't see values entered on prompt  
 
   tasks: 
   - name: printing variables got from prompt

@@ -1,0 +1,6 @@
+- name: printing variables given in command line
+  hosts: localhost
+  tasks: 
+  - name: printing variables
+    ansible.builtin.debug:
+      msg: "my name is {{NAME}}"

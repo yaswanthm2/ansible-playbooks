@@ -1,0 +1,16 @@
+- name: variables from task level 
+  hosts: localhost 
+  vars: 
+  - land: 2acers 
+    houses: 3houses
+  tasks: 
+  - name: printing variables from play level 
+    ansible.builtin.debug: 
+      msg: "my land is {{land}} and total {{houses}}"
+  - name: printing variables from play and task level
+    vars:
+      land: 2acers
+      houses: 5houses
+      area: hyderabad
+    ansible.builtin.debug:
+      msg: "my land is {{land}} and total {{houses}} in {{area}}"

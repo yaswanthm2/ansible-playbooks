@@ -1,0 +1,5 @@
+[node]
+44.211.154.240
+
+[node:vars]
+NODE=ansiblenode
