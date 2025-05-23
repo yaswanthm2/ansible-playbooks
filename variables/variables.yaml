@@ -1,2 +1,9 @@
-name: yaswanth 
-course: ansible
+- name: using variables from play level 
+  hosts: localhost
+  vars: 
+    name: yaswanth
+    course: ansible
+  tasks: 
+  - name: printing variables
+    ansible.builtin.debug:
+      msg: "my name is {{name}}, learning {{course}}"
