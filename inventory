@@ -1,4 +1,4 @@
-[node1]
+[mongodb]
 44.211.154.240
 
 
@@ -13,4 +13,3 @@ roboshop-us-dev-db-mysql-02.joindevops.online
 
 [db:children]
 mongodb
-mysql
