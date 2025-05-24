@@ -1,0 +1,11 @@
+- name: installing list of packages
+  hosts: node
+  tasks: 
+  - name: installing packages
+    ansible.builtin.yum:
+      name: {{item}}         #loop will give variable item 
+      state: installed
+    loop:
+    - nginx
+    - postfix
+    - mailx
