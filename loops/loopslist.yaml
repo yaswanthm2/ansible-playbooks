@@ -3,7 +3,7 @@
   tasks: 
   - name: installing packages
     ansible.builtin.yum:
-      name: {{item}}         #loop will give variable item 
+      name: '{{item}}''         #loop will give variable item 
       state: installed
     loop:
     - nginx
