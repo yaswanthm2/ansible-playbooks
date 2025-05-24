@@ -26,5 +26,5 @@
     register: directory
   - name: printing output directory checking
     ansible.builtin.debug:
-      msg: "output: {{directory}} 
-      
+      msg: "output: {{directory}}"
+
