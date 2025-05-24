@@ -37,7 +37,7 @@
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
       dest: /tmp
-  - name: Extract foo.tgz into /var/lib/foo
+  - name: Extracting artifacts into app directory
     ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
       dest: /app
@@ -59,9 +59,7 @@
      dest: /etc/yum.repos.d/mongodb-org-8.0.repo
 
   - name: installing mongodb
-    ansible.builtin.yum:
-      name: mongodb-org
-      state: installed
+    ansible.builtin.shell: 'curl -LO https://downloads.mongodb.com/compass/mongosh-2.0.3-linux-x64.rpm'
 
   - name: load schema
     ansible.builtin.command: mongosh --host 44.211.154.240 < /app/schema/catalogue.js
