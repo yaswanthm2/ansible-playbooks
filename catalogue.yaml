@@ -1,0 +1,11 @@
+- name: installing and starting catalogue service
+  hosts: catalogue
+  become: yes
+  tasks: 
+  - name: setting nodejs repos
+    ansible.builtin.shell: 'curl -sL https://rpm.nodesource.com/setup_lts.x | bash'
+
+  - name: installing nodejs
+    ansible.builtin.yum:
+     name: nodejs
+     state: installed
