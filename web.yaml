@@ -30,7 +30,7 @@
       dest: /usr/share/nginx/html
       remote_src: yes
 
-  - name: copying mongo repo 
+  - name: copying roboshop config
     ansible.builtin.copy:
      src: roboshop.config
      dest: /etc/nginx/default.d/roboshop.conf
