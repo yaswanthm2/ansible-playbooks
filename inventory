@@ -2,10 +2,6 @@
 44.211.154.240
 
 
-[mongodb]
-roboshop-us-dev-db-mongodb-01.joindevops.online
-roboshop-us-prod-db-mongodb-01.joindevops.online
-roboshop-us-dev-db-mongodb-02.joindevops.online
 
 [mysql]
 roboshop-us-dev-db-mysql-01.joindevops.online
