@@ -60,7 +60,7 @@
 
   - name: installing mongodb
     ansible.builtin.yum:
-     name: mongodb
+     name: mongodb-org
      state: installed
   
 
