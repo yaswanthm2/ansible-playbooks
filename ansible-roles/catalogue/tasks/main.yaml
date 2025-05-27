@@ -21,8 +21,8 @@
 
 - name: installing mongodb to load schema
   ansible.builtin.import_role:
-  name: common
-  tasks_from: mongorepo
+    name: common
+    tasks_from: mongorepo
 
 
 - name: load schema
@@ -30,5 +30,5 @@
 
 - name: deamon reload
   ansible.builtin.import_role:
-  name: common
-  tasks_from: deamonreload
+   name: common
+   tasks_from: deamonreload
