@@ -1,0 +1,5 @@
+- name: setting nodejs environment and installing nodejs
+  become: yes
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejsenv
