@@ -1,0 +1,4 @@
+- name: roboshop configuration through roles
+  hosts: {{component}}
+  roles:
+  - {{component}}
