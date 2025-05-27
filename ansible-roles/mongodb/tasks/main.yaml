@@ -1,4 +1,5 @@
 - name: copying mongo repo from common role folder
+  become: yes
   ansible.builtin.import_role: 
     name: common
     tasks: 
