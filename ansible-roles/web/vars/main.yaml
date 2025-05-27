@@ -1,0 +1,5 @@
+catalogue_host: 13.220.151.49
+user_host: user
+payment_host: payment
+cart_host: cart
+shipping_host: shipping 
