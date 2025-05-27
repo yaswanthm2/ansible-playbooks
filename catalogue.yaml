@@ -65,7 +65,7 @@
   
 
   - name: load schema
-    ansible.builtin.shell: mongosh --host 44.211.42.46 < /app/schema/catalogue.js
+    ansible.builtin.shell: mongosh --host 172.31.93.123 < /app/schema/catalogue.js
 
 
 
