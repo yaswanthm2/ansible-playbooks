@@ -3,3 +3,32 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: nodejsenv
+
+- name: creting user and app directory 
+  ansible.builtin.import_role:
+   name: common
+   tasks_from: userappdirec
+
+- name: downloading artifacts
+  ansible.builtin.import_role:
+   name: common
+   tasks_from: artifacts
+
+- name: copying catalogue service
+  ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/catalogue.service
+
+- name: installing mongodb to load schema
+  ansible.builtin.import_role:
+  name: common
+  tasks_from: mongorepo
+
+
+- name: load schema
+  ansible.builtin.shell: mongosh --host 172.31.93.123 < /app/schema/catalogue.js
+
+- name: deamon reload
+  ansible.builtin.import_role:
+  name: common
+  tasks_from: deamonreload

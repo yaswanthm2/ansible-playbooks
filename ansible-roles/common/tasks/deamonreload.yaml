@@ -1,0 +1,10 @@
+- name: daemon reload 
+  become: yes
+  ansible.builtin.systemd_service:
+      daemon_reload: true
+- name: catalogue service start
+  become: yes
+  ansible.builtin.service: 
+     name: catalogue
+     state: started
+     enabled: yes

@@ -1,0 +1,14 @@
+- name: downloading file from url
+  ansible.builtin.get_url:
+      url: https://roboshop-builds.s3.amazonaws.com/{{component}}.zip
+      dest: /tmp
+- name: Extracting artifacts into app directory
+  ansible.builtin.unarchive:
+      src: /tmp/{{component}}.zip
+      dest: /app
+      remote_src: yes
+
+- name: install dependencies
+  ansible.builtin.command: npm install 
+  args: 
+      chdir: /app
